@@ -64,7 +64,7 @@ app.get('/stocks/filter/exchange', (req, res) => {
 function filterByIndustry(stock, industry) {
   return stock.industry.toLowerCase() === industry.toLowerCase();
 }
-app.get('/stocks/filter/industry/:industry', (req, res) => {
+app.get('/stocks/filter/industry', (req, res) => {
   let industry = req.query.industry;
   let stocksCopy = stocks.slice();
   let sortedStocks = stocksCopy.filter((stock) =>
